@@ -1,0 +1,193 @@
+/* Importación de Fuente */
+body {
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* --- Aquí es donde se ingresa la imagen de fondo --- */
+    background-image: url('buo.jpeg'); 
+    /* Las siguientes propiedades controlan cómo se ve la imagen */
+    background-size: cover;          /* Hace que la imagen cubra todo el fondo */
+    background-repeat: no-repeat;    /* Evita que la imagen se repita */
+    background-attachment: fixed;    /* Fija la imagen para que no se mueva al hacer scroll */
+    background-color: #292a2c;       /* Color de respaldo si la imagen falla en cargar */
+    /* -------------------------------------------------- */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #ffffff; /* Azul más oscuro y profesional */
+    font-weight: 700;
+}
+
+/* --- Estilo de Tarjetas y Contenedores --- */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex; /* Usamos Flexbox para organizar las secciones */
+    flex-direction: column;
+    gap: 30px;
+}
+
+.seccion-card {
+    background-color: #292a2c;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra más pronunciada */
+}
+
+/* --- Header / Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #2834421b 0%, #171d2237 100%);
+    color: rgb(27, 27, 27);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 3px solid rgb(33, 27, 27);
+    object-fit: cover;
+}
+
+.logo-y-nombre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.badge {
+    background-color: #f41010;
+    color: #d8d8d8;
+    font-size: 0.7em;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.quienes-somos-card {
+    max-width: 600px;
+    margin: 20px auto 0;
+    background: rgba(255, 255, 255, 0.15); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: none;
+}
+.quienes-somos-card h2 {
+    color: rgb(255, 250, 250);
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.quienes-somos-card p {
+    color: hsl(0, 0%, 100%);
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}
+
+/* --- Mapa --- */
+#mapa-recorrido {
+    text-align: center;
+}
+
+.mapa-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #292a2c; /*no cambiar */
+    border: 1px solid #ffffff;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* Oculta el texto de imagen en la vista final */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mapa-texto {
+    font-style: italic;
+    color: #fdfeff;
+}
+
+/* --- Datos de Transporte (Grid y Cards) --- */
+.datos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 4 columnas o menos en móvil */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dato-info-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #ffffff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dato-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dato-info-card h3 {
+    margin-top: 0;
+    font-size: 0.9em;
+    color: #433d3d;
+}
+
+.dato-grande {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #0b0b0b;
+    margin: 5px 0 0;
+}
+
+.estado-activo {
+    color: #28a745; /* Color verde para estado activo */
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.nota {
+    text-align: center;
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed #ffffff9d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #57585a;
+    color: #ffffff;
+}

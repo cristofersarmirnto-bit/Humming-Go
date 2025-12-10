@@ -1,0 +1,91 @@
+<!-- Indica el tipo de documento, en este caso HTML5 -->
+<!DOCTYPE html>
+
+<!-- Comienza el documento HTML con el idioma español -->
+<html lang="es">
+
+<head>
+   <title>Humming Go</title> 
+    <h2>Humming Go</h2>
+    <h1>en desarrollo</h1>
+
+     <body style="background-image: url(buo.jpeg);"> 
+    <!-- Define el conjunto de caracteres (UTF-8 admite acentos, ñ, etc.) -->
+
+    <meta charset="UTF-8">
+
+    <!-- Hace que el diseño sea adaptable a distintos tamaños de pantalla (responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <title>Humming Go</title>
+
+
+    <!-- Estilos CSS internos para darle formato visual a la página -->
+    <style>
+        h1{
+             color: white; 
+        }
+        h2{
+            color: white;  
+            font-family: Arial, sans-serif;
+            font-size: 100px;    
+        }
+        /* Aplica estilo general al cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif; /* Fuente de texto */
+            text-align: center;             /* Centra el contenido */
+            margin-top: 50px;               /* Espacio superior */
+        }
+
+        /* Contenedor principal que centra los elementos */
+        .container {
+            display: flex;                  /* Usa Flexbox para organizar elementos */
+            flex-direction: column;         /* Coloca los elementos uno debajo del otro */
+            align-items: center;            /* Centra horizontalmente */
+        }
+
+        /* Estilo de la imagen */
+        img {
+            width: 300px;                   /* Ancho fijo de la imagen */
+            height: auto;                   /* Altura automática para mantener proporciones */
+            margin-bottom: 20px;            /* Espacio debajo de la imagen */
+        }
+
+        /* Estilo del botón */
+        button {
+            padding: 10px 20px;             /* Espacio interno del botón */
+            font-size: 16px;                /* Tamaño del texto */
+            background-color: #4CAF50;      /* Color de fondo (verde) */
+            color: white;                   /* Color del texto */
+            border: none;                   /* Sin borde */
+            cursor: pointer;                /* Cursor de mano al pasar por encima */
+            border-radius: 5px;             /* Bordes redondeados */
+        }
+
+        /* Estilo cuando el usuario pasa el cursor sobre el botón */
+        button:hover {
+            background-color: #45a049;      /* Cambia el color al pasar el mouse */
+        }
+    </style>
+</head>
+
+<!-- Cuerpo de la página, donde va el contenido visible -->
+<body>
+
+    <!-- Contenedor para agrupar imagen y botón -->
+    <div class="container">
+        <!-- Imagen cargada desde internet (puedes cambiar la URL por la tuya) -->
+        <img src="Camion UMB.png" alt="Imagen de ejemplo">
+
+        <!-- Botón que lleva a otra página al hacer clic -->
+      <button onclick="window.location.href='B.html';">
+    Registro.
+</button>
+<br> <button onclick="window.location.href='C.html';">
+    Inicio.
+</button>
+    </div>
+
+</body>
+</html>

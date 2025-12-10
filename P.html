@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <body style="background-image: url(buo.jpeg);"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humming Go</title>
+    <style>
+        /* * PARTE 1: Estilos básicos de la página
+        */
+        h1{
+            color: white;  
+            font-family: Arial, sans-serif;
+            font-size: 50px;    
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* * PARTE 2: Estilos para las imágenes en miniatura
+        */
+        .thumbnail {
+            width: 150px; /* Tamaño de la miniatura */
+            height: 150px;
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+            border: 3px solid #333;
+            transition: transform 0.3s ease-in-out; /* Transición suave al pasar el mouse */
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+        }
+
+        /* * PARTE 3: Estilos para la ventana modal (el lightbox)
+        */
+        .modal {
+            display: none; /* Por defecto, la modal está oculta */
+            position: fixed; /* Posición fija para cubrir toda la pantalla */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semi-transparente */
+        }
+
+        /* * Contenido de la modal (la imagen expandida)
+        */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%; /* Ancho de la imagen expandida */
+            max-width: 700px;
+            margin-top: 50px;
+            animation: zoom 0.6s; /* Animación de zoom al abrir */
+        }
+
+        /* * Estilo para el botón de cerrar (x)
+        */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* * Animación de zoom
+        */
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Curiculos</h1>
+
+    <div class="gallery-container">
+        <img class="thumbnail" id="img1" src="BUO2.jpg" alt="Coriculo 1" onclick="openModal('BUO2.jpg')">
+
+        <img class="thumbnail" id="img2" src="BUO2.jpg" alt="CUrriculo 2" onclick="openModal('BUO2.jpg')">
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Obtiene la modal
+        var modal = document.getElementById("myModal");
+        // Obtiene el elemento <img> dentro de la modal
+        var modalImg = document.getElementById("img01");
+
+        /**
+         * Abre la modal y establece la fuente de la imagen.
+         * @param {string} src - La URL de la imagen en alta resolución.
+         */
+        function openModal(src) {
+            modal.style.display = "block"; // Muestra la modal
+            modalImg.src = src;            // Carga la imagen expandida
+        }
+
+        /**
+         * Cierra la modal.
+         */
+        function closeModal() {
+            modal.style.display = "none"; // Oculta la modal
+        }
+
+        // También puedes cerrar la modal haciendo clic en cualquier parte fuera de la imagen
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>

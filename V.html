@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Google Maps Incrustado</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* El cuerpo y html deben ocupar toda la altura */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .map-container {
+            width: 80%; /* Ancho del contenedor */
+            max-width: 1000px; /* Ancho máximo */
+            height: 600px; /* Altura fija para el mapa */
+            margin: 40px auto; /* Centrar el contenedor en la página */
+            border: 5px solid #333; /* Borde para resaltarlo */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #4285F4; /* Color azul de Google */
+        }
+        
+        /* Asegura que el iframe ocupe todo el espacio del contenedor */
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Eliminar el borde predeterminado del iframe */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ubicación Destacada</h1>
+
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.59798485066!2d-99.14170562507878!3d19.431969471783427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f041267869cd%3A0x6734d5804df97b91!2sPalacio%20de%20Bellas%20Artes!5e0!3m2!1ses!2smx!4v1703223011400!5m2!1ses!2smx" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        </div>
+
+</body>
+</html>

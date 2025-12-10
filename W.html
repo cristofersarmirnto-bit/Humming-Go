@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario con Imágenes Expandibles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alineación arriba para que no se vea cortado */
+            min-height: 100vh;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .profile-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #1a73e8; /* Un color de título más destacado */
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        /* Estilos para el componente expandible (details) */
+        details {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        summary {
+            font-weight: bold;
+            padding: 15px;
+            cursor: pointer;
+            outline: none;
+            list-style: none; /* Oculta el triángulo predeterminado */
+            display: block; /* Para que ocupe todo el ancho */
+            background-color: #e8f0fe;
+            color: #333;
+            border-radius: 6px;
+        }
+        summary::before {
+            content: '▶️'; /* Símbolo de triángulo cerrado */
+            margin-right: 10px;
+        }
+        details[open] summary::before {
+            content: '🔽'; /* Símbolo de triángulo abierto */
+        }
+        .image-content {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+        }
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block; /* Elimina espacios indeseados */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <h1>📸 Galería de Perfil de Usuario</h1>
+        
+        <details>
+            <summary>Foto de Perfil Principal</summary> 
+            <div class="image-content">
+                <p>Esta es la imagen principal de mi perfil. Haz clic para ver el detalle.</p>
+                <img src="buo.jpeg" alt="Imagen de perfil principal" class="profile-image"> 
+            </div>
+        </details>
+
+        <details>
+            <summary>Mi Último Proyecto</summary>
+            <div class="image-content">
+                <p>Aquí muestro una captura de mi proyecto más reciente.</p>
+                <img src="buo.jpeg" alt="Captura de pantalla de un proyecto" class="profile-image"> 
+            </div>
+        </details>
+
+        <p style="text-align: center; margin-top: 20px; color: #666;">
+            Despliega cada sección para ver las imágenes.
+        </p>
+    </div>
+
+</body>
+</html>
